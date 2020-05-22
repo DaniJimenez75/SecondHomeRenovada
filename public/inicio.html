@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SECOND HOME STUDIO</title>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="js/bootstrap.min.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/bootstrap.min.css"> 
+    <link rel="stylesheet" href="css/navegacion.css"> 
+    <link rel="stylesheet" href="css/precios.css"> 
+    <link rel="stylesheet" href="css/formacion.css"> 
+
+<script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-auth.js"></script>  
+</head>
+<script src="js/app.js"></script>
+
+<body>
+<h1>BIENVENIDO USUARIO <script> var email = sessionStorage.getItem('email'); document.write(email);</script></h1>
+<script>if(sessionStorage.getItem('emailVerified') == false){
+    document.write("Valida email porfavor");
+}
+
+</script>
+<button onclick="cerrar()">Cerrar sesión</button>
+
+</body>
+</html>
