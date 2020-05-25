@@ -6,11 +6,11 @@
     <title>SECOND HOME STUDIO</title>
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-    <script src="js/bootstrap.min.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="css/bootstrap.min.css"> 
-    <link rel="stylesheet" href="css/navegacion.css"> 
-    <link rel="stylesheet" href="css/precios.css">
-    <link rel="stylesheet" href="css/login.css"> 
+    <script src="../js/bootstrap.min.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="../css/bootstrap.min.css"> 
+    <link rel="stylesheet" href="../css/navegacion.css"> 
+    <link rel="stylesheet" href="../css/precios.css">
+    <link rel="stylesheet" href="../css/login.css"> 
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
     integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
     crossorigin="anonymous"></script>
@@ -35,18 +35,18 @@
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
-  <img src="img/logoo.png" class="navbar-brand d-lg-none" width="100">
+  <img src="../img/logoo.png" class="navbar-brand d-lg-none" width="100">
   
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav mr-auto">
   
        
         <li class="nav-item border border-dark rounded-top bg-light">
-          <a class="nav-link" id="apartado" href="index.html" tabindex="-1" aria-disabled="true">Inicio</a>
+          <a class="nav-link" id="apartado" href="../index.html" tabindex="-1" aria-disabled="true">Inicio</a>
         </li>
   
         <li class="nav-item border border-dark rounded-top bg-light">
-          <a class="nav-link " id="apartado" href="staff.html" tabindex="-1" aria-disabled="true">STAFF</a>
+          <a class="nav-link " id="apartado" href="../staff.html" tabindex="-1" aria-disabled="true">STAFF</a>
         </li>
   
   
@@ -55,10 +55,10 @@
             Grupos
           </a>
           <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <a class="dropdown-item" href="formacion.html">Formación</a>
+            <a class="dropdown-item" href="../Grupos/formacion.html">Formación</a>
             
             <div class="dropdown-divider"></div>
-            <a class="dropdown-item" href="competicion.html">Competición</a>
+            <a class="dropdown-item" href="../Grupos/competicion.html">Competición</a>
         </li>
   
       <li class="nav-item dropdown border border-dark rounded-top bg-light">
@@ -99,16 +99,16 @@
        
   </ul>
   
-      <img src="img/logoo.png" class="navbar-brand d-none d-lg-block" width="100" href="#">
+      <img src="../img/logoo.png" class="navbar-brand d-none d-lg-block" width="100" href="#">
   
   <ul class="navbar-nav ml-auto">
        
   <li class="nav-item border border-dark rounded-top bg-light" >
-      <a class="nav-link" id="apartado" href="horario.html" tabindex="-1" aria-disabled="true">Horario</a>
+      <a class="nav-link" id="apartado" href="../horario.html" tabindex="-1" aria-disabled="true">Horario</a>
   </li>
   
   <li class="nav-item border border-dark rounded-top bg-light">
-  <a class="nav-link" id="apartado" href="precios.html" tabindex="-1" aria-disabled="true">Precios</a>
+  <a class="nav-link" id="apartado" href="../precios.html" tabindex="-1" aria-disabled="true">Precios</a>
   </li>
   
   <li class="nav-item dropdown border border-dark rounded-top bg-light">
@@ -144,22 +144,25 @@
 <h1 id="tituloSecondHome" class="card-title text-center">SECOND HOME STUDIO</h1>
 <div class="container login-container">
   <div class="row">
-      <div class=" col-md-6 offset-md-3 offset-lg-2 login-form-2">
-          <h3>Registrarse</h3>
+    <div class=" col-md-6 offset-md-3 offset-lg-2 login-form-2">
+        <h3>Entrar al sitio</h3>
           <br>
-          
               <div class="form-group">
-                <input type="email" id="email" placeholder="Coloca aqui tu email" class="form-control mr-sm-2" />
+                <input type="email" id="emailA" placeholder="Coloca aqui tu email" class="form-control mr-sm-2" />
               </div>
               <div class="form-group">
-                <input type="password" id="pass" placeholder="Coloca aqui tu password" class="form-control mr-sm-2" />
+                <input type="password" id="passA" placeholder="Coloca aqui tu password" class="form-control mr-sm-2" />
               </div>
               <div class="form-group">
-                  <button type="submit" onclick="enviar()" class="btn btn-outline-success my-2 my-sm-0">Registro</button>
-                 
+                <button onclick="acceso()" id="botonAcceso" class="btn btn-outline-success my-2 my-sm-0">Acceso</button>
               </div>
-
+              <div class="form-group">
+                  <a href="#" class="ForgetPwd">Has olvidado la contraseña?</a>
+              </div>
       </div>
+     
+
+    
   </div>
 </div>
 
