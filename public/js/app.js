@@ -117,8 +117,8 @@ function observador2(){
 
 function restablecerContraseña(){
   var auth = firebase.auth();
-  var emailAddress = document.getElementById("email");
-  emailAddress = emailAddress.toString();
+  var emailAddress = document.getElementById("email").value;
+
 
   
   auth.sendPasswordResetEmail(emailAddress).then(function() {
