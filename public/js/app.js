@@ -16,6 +16,8 @@ var firebaseConfig = {
 function enviar(){
     var email=document.getElementById('email').value;
       var pass=document.getElementById('pass').value;
+
+
       //alert("email="+email+" pass="+pass);
   
       firebase.auth().createUserWithEmailAndPassword(email, pass)
@@ -25,6 +27,9 @@ function enviar(){
         alert(errorMessage);
   })
   .then(function(){
+    document.getElementById('email').value="";
+    document.getElementById('pass').value="";
+    alert("Registrado con exito");
     verificar();
   });
   }
@@ -58,27 +63,71 @@ function observador(){
         if (user) {
           // User is signed in.
           console.log("Existe usuario activo");
-
           var displayName = user.displayName;
           var email = user.email;
           var emailVerified = user.emailVerified;
-          if(emailVerified == false){
-            sessionStorage.setItem("emailVerified", emailVerified);
-
-          }
           var photoURL = user.photoURL;
           var isAnonymous = user.isAnonymous;
           var uid = user.uid;
           var providerData = user.providerData;
           // ...
           sessionStorage.setItem("email", email);
-          location.href ="inicio.html";
+          var emailAdministrador = 'administrador@administrador.com';
+          
+          if(email==emailAdministrador){
+            location.href ="../loginregistro/inicioAdministrador.html";
+          }else{
+            location.href ="../loginregistro/inicio.html";
+          }
+          
         } else {
           // User is signed out.
           // ...
           console.log("No existe usuario activo");
         }
       });
+}
+
+function observador2(){
+  firebase.auth().onAuthStateChanged(function(user) {
+      if (user) {
+        // User is signed in.
+        console.log("Existe usuario activo");
+        var displayName = user.displayName;
+        var email = user.email;
+        var emailVerified = user.emailVerified;
+        if(emailVerified == false){
+          document.getElementById("contenedor").style.display="none";
+          alert("Verifica tu email para mostrar el contenido");
+        }
+        var photoURL = user.photoURL;
+        var isAnonymous = user.isAnonymous;
+        var uid = user.uid;
+        var providerData = user.providerData;
+        // ...
+
+        
+      } else {
+        // User is signed out.
+        // ...
+        console.log("No existe usuario activo");
+      }
+    });
+}
+
+function restablecerContraseña(){
+  var auth = firebase.auth();
+  var emailAddress = document.getElementById("email");
+  emailAddress = emailAddress.toString();
+
+  
+  auth.sendPasswordResetEmail(emailAddress).then(function() {
+    alert("Se ha enviado un correo");
+  }).catch(function(error) {
+    alert("Error");
+    });
+  
+
 }
 
 function cerrar(){
@@ -91,4 +140,21 @@ function cerrar(){
     .catch(function(error){
         console.log(error);
     })
+}
+
+
+function mostrarNombre(){
+var email = sessionStorage.getItem('email');
+var numero = email.indexOf("@"); 
+var nombre = email.substr(0,numero);
+nombre = primeraLetraMayuscula(nombre);
+
+
+document.write(nombre);
+
+function primeraLetraMayuscula(string) {
+    return string.charAt(0).toUpperCase() + string.slice(1);
+}
+
+
 }
