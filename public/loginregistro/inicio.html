@@ -6,7 +6,7 @@
     <title>SECOND HOME STUDIO</title>
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-    <script src="js/bootstrap.min.js" crossorigin="anonymous"></script>
+    <script src="../js/bootstrap.min.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="../css/bootstrap.min.css"> 
     <link rel="stylesheet" href="../css/navegacion.css"> 
     <link rel="stylesheet" href="../css/precios.css"> 
@@ -19,19 +19,72 @@
 <script src="../js/app.js"></script>
 
 <body>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-warning">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      <img src="../img/logoo.png" class="navbar-brand d-lg-none" width="100">
+      
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+      
+           
+            <li class="nav-item border border-dark rounded-top bg-light">
+              <a class="nav-link" id="apartado" href="clasesPremium/hiphop.html" tabindex="-1" aria-disabled="true">Hip Hop</a>
+            </li>
+      
+            <li class="nav-item border border-dark rounded-top bg-light">
+              <a class="nav-link " id="apartado" href="clasesPremium/twerk.html" tabindex="-1" aria-disabled="true">Twerk</a>
+            </li>
+      
+    
+            <li class="nav-item border border-dark rounded-top bg-light">
+              <a class="nav-link " id="apartado" href="clasesPremium/dancehall.html" tabindex="-1" aria-disabled="true">dancehall</a>
+            </li>
+        
+      </ul>
+
+      <button type="submit" onclick="cambiarContraseña(sessionStorage.getItem('email'))" class="btn btn-primary my-2 my-sm-0">Cambiar Contraseña</button>&nbsp &nbsp 
+      
+          <img src="../img/logoo.png" class="navbar-brand d-none d-lg-block" width="100" href="#">
+
+          <button onclick="cerrar()" class="btn btn-primary my-2 my-sm-0">Cerrar sesión</button>
+
+
+      
+      <ul class="navbar-nav ml-auto">
+           
+      <li class="nav-item border border-dark rounded-top bg-light" >
+          <a class="nav-link" id="apartado" href="clasesPremium/waacking.html" tabindex="-1" aria-disabled="true">Waacking</a>
+      </li>
+      
+      <li class="nav-item border border-dark rounded-top bg-light">
+      <a class="nav-link" id="apartado" href="clasesPremium/popping.html" tabindex="-1" aria-disabled="true">Popping</a>
+      </li>
+      
+                 
+      <li class="nav-item border border-dark rounded-top bg-light" >
+        <a class="nav-link" id="apartado" href="clasesPremium/house.html" tabindex="-1" aria-disabled="true">House</a>
+      </li>
+        
+      </ul>
+      
+        </div>
+      </nav>
+
     <h1 id="tituloSecondHome" class="card-title text-center">SECOND HOME STUDIO</h1>
 
 <h1 class="card-title text-center" id="nombreUsuario">BIENVENIDO USUARIO 
 <script> 
 mostrarNombre();
 </script></h1>
-<button type="submit" style="left:50%;" onclick="cambiarContraseña(sessionStorage.getItem('email'))" class="btn btn-outline-success my-2 my-sm-0">Cambiar Contraseña</button>
 
-<div id="contenedor">
-<h1>HOLA</h1>
+<div class="card-title text-center">
+        
+
+<script>observador2();</script>
 
 </div>
-<button onclick="cerrar()">Cerrar sesión</button>
-<script>observador2();</script>
 </body>
 </html>
