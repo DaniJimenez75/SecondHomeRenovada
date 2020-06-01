@@ -11,6 +11,8 @@
     <link rel="stylesheet" href="../css/navegacion.css"> 
     <link rel="stylesheet" href="../css/precios.css"> 
     <link rel="stylesheet" href="../css/formacion.css"> 
+    <link rel="stylesheet" href="../css/usuarios.css"> 
+
 
 <script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-app.js"></script>
 <script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-auth.js"></script>  
@@ -20,8 +22,8 @@
 <body>
     <h1 id="tituloSecondHome" class="card-title text-center">SECOND HOME STUDIO</h1>
 
-<h1>BIENVENIDO USUARIO Administrador</h1>
-<script>if(sessionStorage.getItem('emailVerified') == false){
+    <h1 class="card-title text-center" id="nombreUsuario">Bienvenido Administrador</h1>
+      <script>if(sessionStorage.getItem('emailVerified') == false){
     document.write("Valida email porfavor");
 }
 
@@ -30,25 +32,25 @@
 <br>
 <div class="container login-container">
   <div class="row">
-      <div class=" col-md-6 offset-md-3 offset-lg-2 login-form-2 bg-primary">
-          <h3>Registrar usuario nuevo</h3>
+      <div class=" col-md-8 offset-md-3 offset-lg-2 login-form-2 bg-primary">
+          <h3 class="text-center">Registrar usuario nuevo</h3>
           <br>
           
               <div class="form-group">
-                <input type="email" id="email" placeholder="Coloca aqui tu email" class="form-control mr-sm-2" />
+                <input type="email" id="email" placeholder="Colocar email" class="form-control mr-sm-2" />
               </div>
               <div class="form-group">
-                <input type="password" id="pass" placeholder="Coloca aqui tu password" class="form-control mr-sm-2" />
+                <input type="password" id="pass" placeholder="Colocar password" class="form-control mr-sm-2" />
               </div>
               <div class="form-group">
-                  <button type="submit" onclick="enviar()" class="btn btn-outline-success my-2 my-sm-0">Registro</button>
-                 
+                  <button type="submit" onclick="enviar()" class="btn btn btn-warning my-2 my-sm-0">Registrar</button>
+                  <button class="btn btn-success" onclick="cerrar()">Cerrar sesión</button>
+
               </div>
 
       </div>
   </div>
 </div>
 
-<button onclick="cerrar()">Cerrar sesión</button>
 </body>
 </html>

@@ -16,19 +16,94 @@
 <script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-auth.js"></script>  
 </head>
 <script src="../js/app.js"></script>
-
+<nav class="navbar navbar-expand-lg navbar-light bg-warning">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  <img src="../img/logoo.png" class="navbar-brand d-lg-none" width="100">
+  
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+  
+       
+        <li class="nav-item border border-dark rounded-top bg-light">
+          <a class="nav-link" id="apartado" href="../index.html" tabindex="-1" aria-disabled="true">Inicio</a>
+        </li>
+  
+        <li class="nav-item border border-dark rounded-top bg-light">
+          <a class="nav-link " id="apartado" href="../staff.html" tabindex="-1" aria-disabled="true">STAFF</a>
+        </li>
+  
+  
+        <li class="nav-item dropdown border border-dark rounded-top bg-light">
+          <a class="nav-link dropdown-toggle" id="apartado" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Grupos
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="../Grupos/formacion.html">Formación</a>
+            
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="../Grupos/competicion.html">Competición</a>
+        </li>
+  
+      
+        <li class="nav-item border border-dark rounded-top bg-light">
+          <a class="nav-link " id="apartado" href="../clases.html" tabindex="-1" aria-disabled="true">Clases</a>
+        </li>
+       
+  </ul>
+  
+      <img src="../img/logoo.png" class="navbar-brand d-none d-lg-block" width="100" href="#">
+  
+  <ul class="navbar-nav ml-auto">
+       
+  <li class="nav-item border border-dark rounded-top bg-light" >
+      <a class="nav-link" id="apartado" href="../horario.html" tabindex="-1" aria-disabled="true">Horario</a>
+  </li>
+  
+  <li class="nav-item border border-dark rounded-top bg-light">
+  <a class="nav-link" id="apartado" href="../precios.html" tabindex="-1" aria-disabled="true">Precios</a>
+  </li>
+  
+  <li class="nav-item dropdown border border-dark rounded-top bg-light">
+    <a class="nav-link dropdown-toggle" id="apartado" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+      Nosotros
+    </a>
+    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+      <a class="dropdown-item" href="../nosotros/instalaciones.html">Instalaciones</a>
+      
+      <div class="dropdown-divider"></div>
+      <a class="dropdown-item" href="../nosotros/merchandaising.html">Merchandaising</a>
+   
+      <div class="dropdown-divider"></div>
+      <a class="dropdown-item" href="../nosotros/contacto.html">Contactanos</a>
+    </div>
+  
+  </li>
+  
+       
+  <li class="nav-item border border-dark rounded-top bg-light" >
+    <a class="nav-link" id="apartado" href="../loginregistro/login.html" tabindex="-1" aria-disabled="true">Login</a>
+  </li>
+    
+  </ul>
+  
+    </div>
+  </nav>
 <body>
+    <h1 id="tituloSecondHome" class="card-title text-center">SECOND HOME STUDIO</h1>
+<br>
     <div class="container login-container">
         <div class="row">
-            <div class=" col-md-6 offset-md-3 offset-lg-2 login-form-2 bg-dark">
-                <h3>Registrarse</h3>
+            <div class=" col-md-8 offset-md-3 offset-lg-2 login-form-2 bg-primary">
+                <h3 class="text-center">Recuperar contraseña</h3>
                 <br>
                 
                     <div class="form-group">
                       <input type="email" id="email" placeholder="Coloca aqui tu email" class="form-control mr-sm-2" />
                     </div>
                     <div class="form-group">
-                        <button type="submit" onclick="restablecerContraseña()" class="btn btn-outline-success my-2 my-sm-0">Cambiar Contraseña</button>
+                        <button type="submit" onclick="restablecerContraseña()" class="btn btn btn-warning my-2 my-sm-0">Cambiar Contraseña</button>
                        
                     </div>
       
