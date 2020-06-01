@@ -115,6 +115,21 @@ function observador2(){
     });
 }
 
+function cambiarContraseña(emailAddress){
+  var auth = firebase.auth();
+
+
+  
+  auth.sendPasswordResetEmail(emailAddress).then(function() {
+    alert("Se ha enviado un correo a "+emailAddress);
+  }).catch(function(error) {
+    alert("Error");
+    });
+  
+
+}
+
+
 function restablecerContraseña(){
   var auth = firebase.auth();
   var emailAddress = document.getElementById("email").value;
@@ -122,7 +137,7 @@ function restablecerContraseña(){
 
   
   auth.sendPasswordResetEmail(emailAddress).then(function() {
-    alert("Se ha enviado un correo");
+    alert("Se ha enviado un correo a "+emailAddress);
   }).catch(function(error) {
     alert("Error");
     });
