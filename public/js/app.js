@@ -31,6 +31,7 @@ function enviar(){
     document.getElementById('pass').value="";
     alert("Registrado con exito");
     verificar();
+    cambiarContraseña(email);
   });
   }
 
